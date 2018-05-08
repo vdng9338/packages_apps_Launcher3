@@ -70,7 +70,7 @@
         android:title="@string/feed_category">
 
         <SwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="pref_enable_minus_one"
             android:summary="@string/pref_show_google_now_summary"
             android:title="@string/title_show_google_app" />
@@ -90,7 +90,7 @@
         android:title="@string/search_category">
 
         <SwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="pref_bottom_search_bar"
             android:persistent="true"
             android:summary="@string/bottom_search_bar_summary"
@@ -115,7 +115,7 @@
             android:title="@string/extra_bottom_padding_title" />
 
         <SwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:dependency="pref_bottom_search_bar"
             android:key="pref_colored_g_icon"
             android:persistent="true"
@@ -123,20 +123,20 @@
             android:title="@string/force_colored_g_icon_title" />
 
         <SwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="pref_top_search_bar"
             android:persistent="true"
             android:summary="@string/top_search_bar_summary"
             android:title="@string/top_search_bar_title" />
 
         <SwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="pref_show_predictions"
             android:summary="@string/summary_app_suggestions"
             android:title="@string/title_app_suggestions" />
 
         <SwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="pref_qsb_voice_icon"
             android:summary="@string/qsb_voice_icon_summary"
             android:title="@string/qsb_voice_icon_title" />
@@ -164,7 +164,7 @@
             android:defaultValue="true" />
 
         <SwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="pref_dark_bottom_search_bar"
             android:persistent="true"
             android:summary="@string/if_theme_is_dark"
@@ -187,7 +187,7 @@
             android:title="@string/hotseat_background_title" />
 
         <ListPreference
-            android:defaultValue="default"
+            android:defaultValue="four"
             android:entries="@array/grid_names"
             android:entryValues="@array/grid_values"
             android:key="pref_grid_columns"
@@ -242,7 +242,7 @@
         </Preference>
 
         <SwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="pref_label_hidden_on_desktop"
             android:persistent="true"
             android:summary="@string/hide_app_label_on_desktop_summary"
@@ -291,7 +291,7 @@
         android:title="@string/other_category">
 
         <SwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="pref_add_icon_to_home"
             android:persistent="true"
             android:summary="@string/auto_add_shortcuts_description"
@@ -304,7 +304,7 @@
             android:title="@string/allow_rotation_title" />
 
         <SwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="pref_physical_animation"
             android:persistent="true"
             android:summary="@string/physical_animation_summary"
