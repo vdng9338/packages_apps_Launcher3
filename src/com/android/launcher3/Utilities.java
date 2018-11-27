@@ -148,6 +148,7 @@ public final class Utilities {
     public static final String PREF_NOTIFICATIONS_GESTURE = "pref_notifications_gesture";
     public static final String LOCK_DESKTOP_KEY = "pref_lock_desktop";
     public static final String SEARCH_PROVIDER_KEY = "pref_search_provider";
+    public static final String BOTTOM_SEARCH_BAR_KEY = "pref_bottom_search_bar";
 
     public static boolean isDesktopLocked(Context context) {
         return getPrefs(context).getBoolean(LOCK_DESKTOP_KEY, false);
@@ -260,6 +261,10 @@ public final class Utilities {
 
     public static String getSearchProvider(Context context) {
         return getPrefs(context).getString(SEARCH_PROVIDER_KEY, "https://www.google.com");
+    }
+
+    public static boolean isBottomSearchBarVisible(Context context) {
+        return getPrefs(context).getBoolean(BOTTOM_SEARCH_BAR_KEY, true);
     }
 
     /**

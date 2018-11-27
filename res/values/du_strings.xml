@@ -125,4 +125,8 @@
     <string name="search_provider_bing" translatable="false">Bing</string>
     <string name="search_provider_duckduckgo" translatable="false">DuckDuckGo</string>
 
+    <!-- Hide/Show search bars -->
+    <string name="bottom_search_bar_title">Show search bar at bottom</string>
+    <string name="bottom_search_bar_summary">Show the search bar on the Dock</string>
+
 </resources>

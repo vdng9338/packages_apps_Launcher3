@@ -8,6 +8,13 @@
         android:defaultValue="true"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_bottom_search_bar"
+        android:title="@string/bottom_search_bar_title"
+        android:summary="@string/bottom_search_bar_summary"
+        android:defaultValue="true"
+        android:persistent="true" />
+
      <ListPreference
         android:entries="@array/search_provider_names"
         android:entryValues="@array/search_provider_values"
