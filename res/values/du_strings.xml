@@ -119,4 +119,10 @@
     <string name="theme_style_light">Light style</string>
     <string name="theme_style_dark">Dark style</string>
 
+    <!-- Search engine -->
+    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_google" translatable="false">Google</string>
+    <string name="search_provider_bing" translatable="false">Bing</string>
+    <string name="search_provider_duckduckgo" translatable="false">DuckDuckGo</string>
+
 </resources>
