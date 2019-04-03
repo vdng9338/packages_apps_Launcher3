@@ -58,8 +58,8 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
-import com.android.internal.util.du.ActionUtils;
-import com.android.internal.util.du.Utils;
+import com.android.internal.util.xtended.ActionUtils;
+import com.android.internal.util.xtended.XtendedUtils;
 
 import com.android.launcher3.Launcher.LauncherOverlay;
 import com.android.launcher3.LauncherAppWidgetHost.ProviderChangedListener;
@@ -3563,7 +3563,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         launchIntent.setPackage("com.google.android.googlequicksearchbox");
         launchIntent.setClassName("com.google.android.googlequicksearchbox",
                 "com.google.android.googlequicksearchbox.SearchActivity");
-        if (Utils.isPackageInstalled(context,
+        if (XtendedUtils.isPackageInstalled(context,
                 "com.google.android.googlequicksearchbox")) {
             context.startActivity(launchIntent);
         } else {
@@ -3572,3 +3572,4 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         }
     }
 }
+
