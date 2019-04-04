@@ -128,6 +128,28 @@ public class AppDrawer extends SettingsActivity implements PreferenceFragment.On
                     startActivity(new Intent(getActivity(), HiddenAppsActivity.class));
                     return false;
             });
+
+            final ListPreference gridAllAppColumns = (ListPreference) findPreference(Utilities.GRID_ALLAPPCOLUMNS);
+            gridAllAppColumns.setSummary(gridAllAppColumns.getEntry());
+            gridAllAppColumns.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int index = gridAllAppColumns.findIndexOfValue((String) newValue);
+                    gridAllAppColumns.setSummary(gridAllAppColumns.getEntries()[index]);
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
+
+            final ListPreference gridAllAppRows = (ListPreference) findPreference(Utilities.GRID_ALLAPPROWS);
+            gridAllAppRows.setSummary(gridAllAppRows.getEntry());
+            gridAllAppRows.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int index = gridAllAppRows.findIndexOfValue((String) newValue);
+                    gridAllAppRows.setSummary(gridAllAppRows.getEntries()[index]);
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
         }
 
         @Override

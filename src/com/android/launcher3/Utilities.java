@@ -137,6 +137,8 @@ public final class Utilities {
             TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
     public static final String GRID_COLUMNS = "pref_grid_columns";
     public static final String GRID_ROWS = "pref_grid_rows";
+    public static final String GRID_ALLAPPCOLUMNS = "pref_grid_allappcolumns";
+    public static final String GRID_ALLAPPROWS = "pref_grid_allapprows";
     public static final String HOTSEAT_ICONS = "pref_hotseat_icons";
     public static final String DESKTOP_SHOW_LABEL = "pref_desktop_show_label";
     public static final String ALLAPPS_SHOW_LABEL = "pref_allapps_show_label";
@@ -176,6 +178,14 @@ public final class Utilities {
 
     public static int getHotseatIcons(Context context, int fallback) {
         return getIconCount(context, HOTSEAT_ICONS, fallback);
+    }
+
+    public static int getGridAllAppColumns(Context context, int fallback) {
+        return getIconCount(context, GRID_ALLAPPCOLUMNS, fallback);
+    }
+
+    public static int getGridAllAppRows(Context context, int fallback) {
+        return getIconCount(context, GRID_ALLAPPROWS, fallback);
     }
 
     public static float getIconSizeModifier(Context context) {

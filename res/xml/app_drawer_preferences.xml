@@ -13,5 +13,29 @@
         android:title="@string/hide_app"
         android:summary="@string/hide_app_sum"/>
 
+    <PreferenceCategory
+        android:key="allapp_grid_category"
+        android:title="@string/home_grid_title">
+
+        <ListPreference
+            android:key="pref_grid_allappcolumns"
+            android:title="@string/number_of_columns_title"
+            android:summary="%s"
+            android:entries="@array/grid_names"
+            android:entryValues="@array/grid_values"
+            android:defaultValue="-1"
+            android:persistent="true" />
+
+        <ListPreference
+            android:key="pref_grid_allapprows"
+            android:title="@string/number_of_rows_title"
+            android:summary="%s"
+            android:entries="@array/grid_names"
+            android:entryValues="@array/grid_values"
+            android:defaultValue="-1"
+            android:persistent="true" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
 
