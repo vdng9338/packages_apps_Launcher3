@@ -49,6 +49,7 @@
     <!-- Permissions for double tap gestures -->
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.STATUS_BAR_SERVICE" />
 
     <application
         android:backupAgent="com.android.launcher3.LauncherBackupAgent"
