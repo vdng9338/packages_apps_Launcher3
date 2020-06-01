@@ -61,7 +61,7 @@ import android.view.ViewTreeObserver;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.Toast;
 
-import com.android.internal.util.crdroid.Utils;
+import com.android.internal.util.xtended.XtendedUtils;
 
 import com.android.launcher3.Launcher.LauncherOverlay;
 import com.android.launcher3.LauncherAppWidgetHost.ProviderChangedListener;
@@ -293,7 +293,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
             @Override
             public boolean onDoubleTap(MotionEvent event) {
                 if (Utilities.useSleepGesture(context)) {
-                    Utils.switchScreenOff(context);
+                    XtendedUtils.switchScreenOff(context);
                 }
                 return true;
             }
