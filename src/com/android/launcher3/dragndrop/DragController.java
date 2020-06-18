@@ -228,6 +228,9 @@ public class DragController implements DragDriver.EventListener, TouchController
     }
 
     private void callOnDragStart() {
+        if (Utilities.isDesktopLocked(mLauncher.getApplicationContext())) {
+            return;
+        }
         if (mOptions.preDragCondition != null) {
             mOptions.preDragCondition.onPreDragEnd(mDragObject, true /* dragStarted*/);
         }
@@ -548,6 +551,10 @@ public class DragController implements DragDriver.EventListener, TouchController
      * Call this from a drag source view.
      */
     public boolean onControllerTouchEvent(MotionEvent ev) {
+        if (Utilities.isDesktopLocked(mLauncher.getApplicationContext())) {
+            cancelDrag();
+            return false;
+        }
         if (mDragDriver == null || mOptions == null || mOptions.isAccessibleDrag) {
             return false;
         }

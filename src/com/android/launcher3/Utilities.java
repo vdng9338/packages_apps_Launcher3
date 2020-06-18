@@ -129,6 +129,7 @@ public final class Utilities {
     public static final String GRID_COLUMNS = "pref_grid_columns";
     public static final String GRID_ROWS = "pref_grid_rows";
     public static final String HOTSEAT_ICONS = "pref_hotseat_icons";
+    public static final String LOCK_DESKTOP_KEY = "pref_lock_desktop";
 
     /**
      * Indicates if the device has a debug build. Should only be used to store additional info or
@@ -707,6 +708,10 @@ public final class Utilities {
 
     public static boolean showHotseatGradient(Context context) {
         return getPrefs(context).getBoolean(SHOW_HOTSEAT_GRADIENT, true);
+    }
+
+    public static boolean isDesktopLocked(Context context) {
+        return getPrefs(context).getBoolean(LOCK_DESKTOP_KEY, false);
     }
 
     public static void restart(final Context context) {

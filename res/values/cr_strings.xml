@@ -86,4 +86,7 @@
     <string name="number_of_hotseat_title">Homescreen quicklaunch icons</string>
     <string name="state_loading">Applying\u2026</string>
 
+    <!-- Lock desktop -->
+    <string name="lock_desktop_title">Lock desktop</string>
+
 </resources>
