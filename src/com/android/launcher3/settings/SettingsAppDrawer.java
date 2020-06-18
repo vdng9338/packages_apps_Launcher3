@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -66,6 +67,15 @@ public class SettingsAppDrawer extends Activity
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        switch (key) {
+            case Utilities.GRID_COLUMNS:
+            case Utilities.GRID_ROWS:
+            case Utilities.HOTSEAT_ICONS:
+                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                break;
+            default:
+                break;
+        }
     }
 
     private boolean startFragment(String fragment, Bundle args, String key) {
