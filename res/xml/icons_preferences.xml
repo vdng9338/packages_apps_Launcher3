@@ -17,17 +17,17 @@
         android:defaultValue="average"
         android:persistent="true" />
 
-    <com.android.launcher3.settings.NotificationDotsPreference
+    <!--com.android.launcher3.settings.NotificationDotsPreference
         android:key="pref_icon_badging"
         android:title="@string/notification_dots_title"
         android:persistent="false"
         android:widgetLayout="@layout/notification_pref_warning" >
-        <intent android:action="android.settings.NOTIFICATION_SETTINGS">
+        <intent android:action="android.settings.NOTIFICATION_SETTINGS">-->
             <!-- This extra highlights the "Allow notification dots" field in Notification settings -->
-            <extra
+            <!--extra
                 android:name=":settings:fragment_args_key"
                 android:value="notification_badging" />
         </intent>
-    </com.android.launcher3.settings.NotificationDotsPreference>
+    </com.android.launcher3.settings.NotificationDotsPreference>-->
 
 </androidx.preference.PreferenceScreen>
